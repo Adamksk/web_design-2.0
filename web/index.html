@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  
+  
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+<!--start navbar-->
+<div class="navbar">
+  <img src="logo.png" width="125">
+  <a href="#contact">Contact</a>
+  <!--start dropdown-->
+  <div class="dropdown">
+    <button class="dropbtn">Our Service</button>
+    <div class="dropdown-content">
+      <a href="#">Hotel Reservation</a>
+      <a href="#">Staff Transpotation</a>
+      <a href="#">Air Ticketing</a>
+      <a href="#">Pasport and Visa</a>
+      <a href="#">Car Rental</a>
+      <a href="#">Car on Call</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Top Destination</button>
+    <div class="dropdown-content">
+      <a href="#">Singapore</a>
+      <a href="#">Thailand</a>
+      <a href="#">Vietnam</a>
+      <a href="#">Melbourne</a>
+    </div>
+  </div>
+ 
+  <a href="#home">Home</a>
+  <a href="#news">About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn">Tour Package</button>
+    <div class="dropdown-content">
+      <a href="#">International Tour </a>
+      <a href="#">Adventure Tour</a>
+      <a href="#">Domestic Tour</a>
+    </div>
+  </div>
+</div>
+   <!--end dropdown-->
+
+<!--start slideshow-->
+<div class="slideshow-container">
+
+    
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="slider_2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="slider_3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="slider_1.jpg" style="width:100%">
+  </div>
+
+  
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  
+</div>
+
+
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+    <!--end slideshow-->
+
+   <!--Enquiry form-->
+   <div class="container">
+    <form action="action_page.php">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="date" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>
+  <!--tour packages-->
+  <h1>Tour Packages</h1>
+  <!--ADVANTURE TOUR-->
+  <div class="how-section1">
+    <div class="row">
+        <div class="col-md-6 how-img">
+            <img src="tour_img_1.jpg" class="rounded-circle img-fluid" alt=""  style="width: auto;">
+        </div>
+        <div class="col-md-6">
+            <h2>ADVENTURE TOUR</h2>
+                        
+        <p class="text-muted">t’s time to pack your bags and get ready for your next adventure. Check out the tours we’re running in the next weeks through to the end of November, and if you see something that’s up your alley, book away! We’re just as excited as you to explore our big, beautiful world.</p>
+        <P><b>GO FOR ADVENTURE TOUR ></b></P>
+        </div>
+    </div>
+
+  <!--DOMESTIC TOUR-->
+    <div class="row">
+        <div class="col-md-6">
+            <h4>DOMESTIC TOUR</h4>
+                       
+                        <p class="text-muted_2">THEN INTO THE JAR BENDS TORTOR BEFORE THE AUTHORIZED LIFE AND NI-BOOKED FURNISHED FURNITURE MEMBERS OF THE NIBH ARROWS CUNNING BEFORE THESE FIRST CHEERERS PLACE THE FOOD BEDS</p>
+                        <P><b>GO FOR DOMESTIC TOUR ></b></P>
+        </div>
+        
+        <div class="col-md-6 how-img">
+            <img src="tour_img_3.jpg" class="rounded-circle img-fluid" alt=""  style="width: auto;">
+        </div>
+    </div>
+    <!--INTERNATIONNAL TOUR-->
+    <div class="row">
+        <div class="col-md-6 how-img">
+             <img src="tour_img_2.jpg" class="rounded-circle img-fluid" alt="" style="width: auto;">
+        </div>
+        <div class="col-md-6">
+            <h4>INTERNATIONNAL TOUR</h4>
+                        
+                        <p class="text-muted">Revamp your bucket list and give wings to your dreamy destinations. Liberating in the delightful international travel destinations is no more a task. Give yourself a break from the monotonous life, explore the breath-taking beauty through international tourism guide.
+                        </p>
+                        <P><b>GO FOR INTERNATIONNAL TOUR ></b></P>
+
+        </div>
+    </div>
+<!-- The grid: four columns -->
+<div class="row">
+  <div class="column">
+    <img src="destination_1.jpg"width="100%" height="100%" >
+    <p>SINGPORE</p>
+  </div>
+  <div class="column">
+    <img src="destination_2.jpg"width="100%" height="100%">
+    <p>THAILAND</p>
+  </div>
+  <div class="column">
+    <img src="destination_3.jpg"width="100%" height="100%">
+    <P>VIETNAM</P>
+  </div>
+  <div class="column">
+    <img src="destination_4.jpg" width="100%" height="100%">
+    <p>MELBOURNE</p>
+  </div>
+</div>
+<br>
+<br>
+<!-- end The grid: four columns -->
+
+<h3><b>About Us</b> </h3>
+
+<h5>pellentesque luctus felis non nibh masus consectetuls 
+  sed nisl eniull lentesque euismod eronon ntesque tortor molestie 
+  egurabitur lorem ien elementumelitac eleifue 
+  nisl fringilla nisia tris</h5>
+
+  
+
+
+<div class="row">
+  <div class="column">
+    <table>
+      <tr>
+        <th><img src="adventure.png" width="70%" height="70%"></th>
+        <th>Destination Variety</th>
+        
+        
+        
+      </tr>
+      <tr>
+        <td><img src="calendar.png" width="70%" height="70%"></td>
+        <th>Everything's on Schedule</th>
+        
+      </tr>
+      <tr>
+        <td><img src="hotel.png" width="70%" height="70%"></td>
+        <th>Confortable Housing</th>
+        
+      </tr>
+      
+    </table>
+  </div>
+  <div class="column">
+    <table>
+      <tr>
+        <td><span style="color:rgb(255, 0, 170);font-weight:bold">689 +</span></td>
+        <th>Tours</th>
+        
+      </tr>
+      <tr>
+        <td><span style="color:rgb(255, 0, 170);font-weight:bold">320 +</span></td>
+        <th>Destinations</th>
+        
+      </tr>
+      <tr>
+        <td><span style="color:rgb(255, 0, 170);font-weight:bold"> 60  +</span></td>
+        <th>Countries</th>
+        
+      </tr>
+      <tr>
+        <td><span style="color:rgb(255, 0, 170);font-weight:bold">1.8 M +</span></td>
+        <th>Tourists</th>
+    </table>
+  </div>
+</div>
+
+<div class="container">
+  <div class="top-left"><span style="color:rgb(0, 0, 0);font-weight:bold">Our Services</span></div>
+  <div class="centered"><span style="color:rgb(255, 255, 255);font-weight:bold">Lorem ipsum dolor sit amet, 
+     Nam nibh. Nunc varius facilisis eros. Sed erat. </span> </div>
+  <img src="service_wrapper.jpg" alt="Norway" style="width:100%;">
+  
+  <div class="text-block">
+    <img src="disability.png" width="35%" height="35%" class="center">
+    <p>Staff Transportation</p>
+  </div>
+</div>
+<div class="container">
+<div class="text-block1">
+  <img src="hotel_1.png" width="35%" height="35%" class="center1">
+  <p>Hotel Reservation</p>
+</div>
+</div>
+
+<div class="container">
+  <div class="text-block2">
+    <img src="airplane.png" width="35%" height="35%" class="center2">
+    <p>Air Ticketing</p>
+  </div>
+  </div>
+
+  <div class="container">
+  <div class="text-block3">
+    <img src="passport.png" width="35%" height="35%" class="center">
+    <p>Passport and Visa </p>
+  </div>
+  </div>
+
+  <div class="container">
+    <div class="text-block4">
+      <img src="car_wash.png" width="35%" height="35%" class="center">
+      <p>Car Rental Service</p>
+    </div>
+    </div>
+
+    <div class="container">
+      <div class="text-block5">
+        <img src="car.png" width="35%" height="35%" class="center">
+        <p>Car And Call</p>
+         
+      </div>
+      </div>
+      <div class="bg">
+        <img src="ft_logo.png" width="10%" height="10%">
+      
+    </div>
+
+     
+      
+      
+
+</body>
+</html>
+       
+  
